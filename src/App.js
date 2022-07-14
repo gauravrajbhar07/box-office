@@ -1,35 +1,25 @@
-
 import React from 'react';
-import { Switch, Route } from 'react-router-dom'
-import Navs from './Components/Navs';
-import Home from './Pages/Home';
-import Starred from './Pages/Starred';
+import { Switch, Route } from 'react-router-dom';
 
+import Home from './pages/Home';
+import Starred from './pages/Starred';
 
 function App() {
   return (
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
 
-    <div>
-      <Switch>
-        <Route exact path="/">
-          <Home />
+      <Route exact path="/starred">
+        <Starred />
+      </Route>
 
-        </Route>
-
-        <Route exact path="/starred">
-          <Starred />
-
-        </Route>
-
-        <Route >
-          <div>NOT FOUND</div>
-
-        </Route>
-
-      </Switch>
-    </div>
-
+      <Route>
+        <div>Not found</div>
+      </Route>
+    </Switch>
   );
 }
 
-export default App; 
+export default App;
