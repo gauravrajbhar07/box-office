@@ -1,9 +1,9 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Show from './pages/Show';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import Home from './pages/Home';
-import Starred from './pages/Starred';
+import Show from "../src/Pages/Show";
+import Home from "../src/Pages/Home";
+import Starred from "../src/Pages/Starred";
 
 function App() {
   return (
@@ -14,7 +14,6 @@ function App() {
 
       <Route exact path="/show/:id">
         <Show />
-
       </Route>
 
       <Route exact path="/starred">
